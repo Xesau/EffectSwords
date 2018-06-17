@@ -1,0 +1,32 @@
+name: EffectSwords
+author: Xesau
+main: eu.xesau.effectswords.EffectSwordsPlugin
+version: 1.0
+
+commands:
+  effectswords:
+    aliases: [effswords, es, effectsword]
+    description: Apply effects on your sword
+    usage: "§cUsage: /es <effect> [amplifier] OR /es remove <effect>"
+    permission: effectswords.add
+permissions:
+  effectswords.*:
+    default: op
+    children:
+      effectswords.add: true
+      effectswords.remove: true
+      effectswords.free: true
+      effectswords.duration: true
+    description: Access to all the features of EffectSwords
+  effectswords.add:
+    default: true
+    description: Abillity to add an effect
+  effectswords.remove:
+    default: true
+    description: Abillity to remove an effect
+  effectswords.free:
+    default: op
+    description: Add effects for free
+  effectswords.duration:
+    default: op
+    description: Abillity to add a duration parameter to the effect

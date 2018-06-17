@@ -1,0 +1,37 @@
+# This is the EffectSwords Configuration file
+
+# Allow people to buy effects
+buyable: true
+
+# The price per for a extra level of the amplifier (for example Strength II) < II is the amplifier.
+# This will mean that there is one extra level of the amplifier so it will count vv (the price you
+# set down below) up to the price
+amplifierPrice: 10.40
+
+# The materials people can buy effects for
+allowedMaterials:
+- DIAMOND_SWORD
+- GOLD_SWORD
+- IRON_SWORD
+- STONE_SWORD
+- WOOD_SWORD
+- DIAMOND_AXE
+- GOLD_AXE
+- IRON_AXE
+- STONE_AXE
+- WOOD_AXE
+- STICK
+
+# The pricing of the effects they can buy
+pricing:
+  POISON: 120.50
+  NAUSEA: 80.10
+  SLOW: 95.65
+  WEAKNESS: 100.00
+  HARM: 110.50
+  SLOW_DIGGING: 80.30
+  BLINDNESS: 170.80
+  HUNGER: 95.20
+  SATURATION: 100.70
+  WITHER: 180.00
+  CONFUSION: 150.00
