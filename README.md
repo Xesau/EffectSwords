@@ -6,7 +6,7 @@ When `buyable` is turned on in config.yml, Vault and an economy plugin are neede
 
 ## Commands
 
-**/es <effect> [duration]**  
+**/es &lt;effect> [amplifier]**  
 Adds an effect to the held item  
 Permission: effectswords.add
 
