@@ -9,6 +9,7 @@ buyable: true
 amplifierPrice: 10.40
 
 # The materials people can buy effects for
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
 allowedMaterials:
 - DIAMOND_SWORD
 - GOLD_SWORD
@@ -23,6 +24,7 @@ allowedMaterials:
 - STICK
 
 # The pricing of the effects they can buy
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
 pricing:
   POISON: 120.50
   NAUSEA: 80.10

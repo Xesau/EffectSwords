@@ -11,22 +11,17 @@ import org.bukkit.potion.PotionEffect;
 public class EffectSwordsListener implements Listener {
 
 	@EventHandler
-	public void onHitEntity( EntityDamageByEntityEvent e )
-	{
-		if( e.getDamager().getType() == EntityType.PLAYER )
-		{
+	public void onHitEntity(EntityDamageByEntityEvent e) {
+		if (e.getDamager().getType() == EntityType.PLAYER) {
 			Player p = (Player) e.getDamager();
-			if( EffectSwordsPlugin.isAllowed( p.getInventory().getItemInHand().getType() ) )
-			{
-				if( e.getEntity() instanceof LivingEntity )
-				{
-					for( PotionEffect effect : EffectSwordsPlugin.getEffectsFrom( p.getInventory().getItemInHand() ) )
-					{
-						( ( LivingEntity ) e.getEntity() ).addPotionEffect( effect );
+			if (EffectSwordsPlugin.isAllowed(p.getInventory().getItemInHand().getType())) {
+				if (e.getEntity() instanceof LivingEntity) {
+					for (PotionEffect effect : EffectSwordsPlugin.getEffectsFrom(p.getInventory().getItemInHand())) {
+						((LivingEntity) e.getEntity()).addPotionEffect(effect);
 					}
 				}
 			}
 		}
 	}
-	
+
 }

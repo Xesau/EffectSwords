@@ -2,6 +2,7 @@ name: EffectSwords
 author: Xesau
 main: eu.xesau.effectswords.EffectSwordsPlugin
 version: 1.0
+depends: [Vault]
 
 commands:
   effectswords:
