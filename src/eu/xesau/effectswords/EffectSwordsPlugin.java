@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.commons.lang.WordUtils;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -26,9 +25,13 @@ public class EffectSwordsPlugin extends JavaPlugin {
 	public static Economy econ = null;
 
 	public void onEnable() {
-		setupEconomy();
-
 		loadConfig(false);
+
+		if(buyable && !setupEconomy()) {
+			getLogger().severe("Vault is necessary for buyable Sword Effects. Disabling the plugin.");
+			this.getServer().getPluginManager().disablePlugin(this);
+			return;
+		}
 
 		getServer().getPluginManager().registerEvents(new EffectSwordsListener(), this);
 		getCommand("effectswords").setExecutor(new EffectSwordsExecutor());
@@ -76,6 +79,9 @@ public class EffectSwordsPlugin extends JavaPlugin {
 
 	public static ArrayList<PotionEffect> getEffectsFrom(ItemStack item) {
 		ArrayList<PotionEffect> output = new ArrayList<PotionEffect>();
+		if (item.getItemMeta() == null || item.getItemMeta().getLore() == null)
+			return output;
+		
 		int index = -1;
 		List<String> lore = item.getItemMeta().getLore();
 		for (int i = 0; i <= lore.size() && index == -1; i++) {
@@ -188,9 +194,6 @@ public class EffectSwordsPlugin extends JavaPlugin {
 		return amplifierPrice * amplifier;
 	}
 
-	/*
-	 * =============================================== Things from Vault
-	 */
 	private boolean setupEconomy() {
 		if (getServer().getPluginManager().getPlugin("Vault") == null) {
 			return false;

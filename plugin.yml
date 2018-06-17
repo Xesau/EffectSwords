@@ -2,7 +2,7 @@ name: EffectSwords
 author: Xesau
 main: eu.xesau.effectswords.EffectSwordsPlugin
 version: 1.0
-depends: [Vault]
+softdepend: [Vault]
 
 commands:
   effectswords:
@@ -21,13 +21,10 @@ permissions:
     description: Access to all the features of EffectSwords
   effectswords.add:
     default: true
-    description: Abillity to add an effect
+    description: Abillity to add/buy an effect
   effectswords.remove:
     default: true
     description: Abillity to remove an effect
   effectswords.free:
     default: op
-    description: Add effects for free
-  effectswords.duration:
-    default: op
-    description: Abillity to add a duration parameter to the effect
+    description: Add effects for free (and use plugin when buying is turned off)
