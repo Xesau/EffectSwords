@@ -18,3 +18,19 @@ Permission: effectswords.remove
 Shows a list of available effects and their prices
 
 The effectswords.free permission makes adding effects free.
+
+## API
+
+This plugin contains a small API. The methods are described below.
+
+### EffectSwordsPlugin.getEffectsFrom(ItemStack item);
+Description: Returns all effects that have been added to this item.
+Return type: `ArrayList<PotionEffect>`
+
+### EffectSwordsPlugin.applyEffect(ItemStack item, PotionEffect effect)
+Description: Adds an effect to an item
+Return type: `ItemStack`
+
+### EffectSwordsPlugin.removeEffectFrom(ItemStack item, PotionEffectType type)
+Description: Removes an effect from this item if possible. Returns null if the effect wasn't found.
+Return type: `ItemStack`
