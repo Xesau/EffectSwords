@@ -1,12 +1,13 @@
-# EffectSwords
-EffectSword is a simple plugin for Bukkit/Spigot that allows users to buy effects for on their swords.
-You can configure the price for each item, and also configure for which itemms effects can be bought.
+![EffectSwords logo](https://www.spigotmc.org/data/resource_icons/57/57850.jpg?1529261961)
 
-When `buyable` is turned on in config.yml, Vault and an economy plugin are needed.
+# EffectSwords
+EffectSword is a simple plugin for Bukkit/Spigot that allows users to buy potion effects to put on their swords. When a player hits another player or an animal with the sword, the potino effect gets transfered 
+
+When `buyable` is turned on in config.yml, Vault and an economy plugin are needed. You can configure the price for each effect, and also configure for which itemms effects can be bought.
 
 ## Commands
 
-**/es &lt;effect> [amplifier]**  
+**/es &lt;effect&gt; [amplifier]**  
 Adds an effect to the held item  
 Permission: effectswords.add
 
@@ -14,7 +15,7 @@ Permission: effectswords.add
 Removes an effect from the held item  
 Permission: effectswords.remove
 
-**/es list**
+**/es list**  
 Shows a list of available effects and their prices
 
 The effectswords.free permission makes adding effects free.
