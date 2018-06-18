@@ -9,29 +9,29 @@ When `buyable` is turned on in config.yml, Vault and an economy plugin are neede
 
 **/es &lt;effect&gt; [amplifier]**  
 Adds an effect to the held item  
-Permission: effectswords.add
+Permission: `effectswords.add`
 
 **/es remove <effect>**  
 Removes an effect from the held item  
-Permission: effectswords.remove
+Permission: `effectswords.remove`
 
 **/es list**  
 Shows a list of available effects and their prices
 
-The effectswords.free permission makes adding effects free.
+The `effectswords.free` permission makes adding effects free.
 
 ## API
 
 This plugin contains a small API. The methods are described below.
 
 ### EffectSwordsPlugin.getEffectsFrom(ItemStack item);
-Description: Returns all effects that have been added to this item.
+Description: Returns all effects that have been added to this item.  
 Return type: `ArrayList<PotionEffect>`
 
 ### EffectSwordsPlugin.applyEffect(ItemStack item, PotionEffect effect)
-Description: Adds an effect to an item
+Description: Adds an effect to an item  
 Return type: `ItemStack`
 
 ### EffectSwordsPlugin.removeEffectFrom(ItemStack item, PotionEffectType type)
-Description: Removes an effect from this item if possible. Returns null if the effect wasn't found.
+Description: Removes an effect from this item if possible. Returns null if the effect wasn't found.  
 Return type: `ItemStack`
